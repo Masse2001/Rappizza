@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="#" />
+</head>
+
+<body>
+
+<p>Page de connexion Client(e)</p>
+
+<th:form action="#" th:action="@{/submit}" th:object="${customer}" method="post">
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" field="*{email}" name="email"><br>
+    <label for="password">Mot de passe :</label>
+    <input id="password" field="*{password}" name="password" type="text"><br>
+
+    <input type="submit" value="Connexion">
+</th:form>
+
+<a href="http://localhost:8080/customer/signin">Je n'ai pas de compte</a> <br>
+
+<a href="http://localhost:8080/admin/login">Oups! je me suis trompée. Je suis plutot un(e) administrateur(trice)(e)</a>
+</body>
+
+</html>
